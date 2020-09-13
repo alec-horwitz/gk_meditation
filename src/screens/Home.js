@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import styled from 'styled-components/native';
 import {ThemeContext} from '../context/ThemeStore';
 import AnimationRenderer from '../components/AnimationRenderer';
-import animationData from '../assets/testMorph.json';
+import animationData from '../assets/cloudUpDownMove.json';
 
 const Container = styled.View`
   align-items: center;
