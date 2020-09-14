@@ -4,7 +4,6 @@ import {
   createBottomTabNavigator,
   BottomTabBar,
 } from "@react-navigation/bottom-tabs";
-import { ThemeContext } from "../context/ThemeStore";
 import MeditateTimeLine from "../screens/MeditateTimeLine";
 import MeditateAudio from "../screens/MeditateAudio";
 import Settings from "../screens/Settings";
@@ -13,7 +12,6 @@ import Home from "../screens/Home";
 const Tab = createBottomTabNavigator();
 
 const BottomNav = () => {
-  const { theme } = useContext(ThemeContext);
 
   return (
     <NavigationContainer>
@@ -38,7 +36,7 @@ const BottomNav = () => {
           options={{ tabBarVisible: false }}
         />
         <Tab.Screen
-          name="Settings"
+          name="change"
           component={Settings}
           options={{ tabBarVisible: false }}
         />

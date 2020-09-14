@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import styled from 'styled-components/native';
-import {ThemeContext} from '../context/ThemeStore';
 import AnimationRenderer from '../components/AnimationRenderer';
 import animationData from '../assets/testMorph.json';
 
@@ -8,7 +7,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   flex: 1;
-  background: ${(props) => props.theme.gradientTop};
+  background: white;
 `;
 
 const customStyles = {
@@ -17,10 +16,9 @@ const customStyles = {
 };
 
 const Home = () => {
-  const {theme} = useContext(ThemeContext);
 
   return (
-    <Container theme={theme}>
+    <Container >
       <AnimationRenderer
         animationData={animationData}
         autoPlay={true}

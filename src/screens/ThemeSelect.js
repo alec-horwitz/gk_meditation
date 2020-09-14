@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import styled from 'styled-components/native';
-import {ThemeContext} from '../context/ThemeStore';
 import {Button} from 'react-native';
 
 const Container = styled.View`
@@ -11,13 +10,6 @@ const Container = styled.View`
 `;
 
 const ThemeSelect = (props) => {
-  const {handleThemeSelect} = props;
-  const {switchTheme} = useContext(ThemeContext);
-
-  const selectTheme = (themeType) => {
-    handleThemeSelect(false);
-    switchTheme(themeType);
-  };
 
   return (
     <Container>
