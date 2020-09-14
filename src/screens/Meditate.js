@@ -11,7 +11,7 @@ const Container = styled.View`
   background: white;
 `;
 
-const FocusTimer = (props) => {
+const Meditate = (props) => {
   const {navigation, route} = props;
 
   return (
@@ -27,4 +27,4 @@ const FocusTimer = (props) => {
   );
 };
 
-export default FocusTimer;
+export default Meditate;

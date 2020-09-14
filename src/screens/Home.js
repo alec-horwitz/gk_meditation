@@ -22,7 +22,7 @@ const Home = (props) => {
     <Container>
       <Text>I am Home</Text>
       <TouchableOpacity
-        onPress={() => navigation.navigate('MeditateAudio')}>
+        onPress={() => navigation.navigate('Meditate')}>
         <Text >Go to Meditate</Text>
       </TouchableOpacity>
       <TouchableOpacity

@@ -3,8 +3,8 @@ import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from '../screens/Home'
-import MeditateAudio from '../screens/MeditateAudio'
-import FocusTimer from '../screens/FocusTimer'
+import Meditate from '../screens/Meditate'
+import Focus from '../screens/Focus'
 import More from '../screens/More'
 
 const Stack = createStackNavigator()
@@ -19,13 +19,13 @@ function MainNavigator() {
           options={{ title: 'Home Screen' }}
         />
         <Stack.Screen
-          name='MeditateAudio'
-          component={MeditateAudio}
-          options={{ title: 'MeditateAudio Screen' }}
+          name='Meditate'
+          component={Meditate}
+          options={{ title: 'Meditate Screen' }}
         />
         <Stack.Screen
           name='Focus'
-          component={FocusTimer}
+          component={Focus}
           options={{ title: 'Focus Screen' }}
         />
         <Stack.Screen

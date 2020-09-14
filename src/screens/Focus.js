@@ -11,7 +11,7 @@ const Container = styled.View`
   background: white;
 `;
 
-const MeditateAudio = (props) => {
+const Focus = (props) => {
   const {navigation, route} = props;
 
   return (
@@ -27,4 +27,4 @@ const MeditateAudio = (props) => {
   );
 };
 
-export default MeditateAudio;
+export default Focus;
