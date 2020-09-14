@@ -1,20 +1,20 @@
+
 import React, { useContext } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import {
   createBottomTabNavigator,
   BottomTabBar,
 } from "@react-navigation/bottom-tabs";
-import MeditateTimeLine from "../screens/MeditateTimeLine";
 import MeditateAudio from "../screens/MeditateAudio";
-import Settings from "../screens/Settings";
 import Home from "../screens/Home";
+import Parents from "../screens/Parents";
 
 const Tab = createBottomTabNavigator();
 
 const BottomNav = () => {
 
   return (
-    <NavigationContainer>
+    
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarButton: ["Home"].includes(route.name)
@@ -27,21 +27,20 @@ const BottomNav = () => {
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen
           name="Meditate"
-          component={MeditateTimeLine}
+          component={MeditateAudio}
           options={{ tabBarVisible: false }}
         />
         <Tab.Screen
-          name="Bed Time"
+          name="Focus"
           component={MeditateAudio}
           options={{ tabBarVisible: false }}
         />
         <Tab.Screen
           name="change"
-          component={Settings}
+          component={Parents}
           options={{ tabBarVisible: false }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 };
 

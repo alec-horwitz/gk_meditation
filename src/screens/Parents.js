@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import styled from 'styled-components/native';
-import {Text} from 'react-native';
+import {Text, Button} from 'react-native';
 
 const Container = styled.View`
   align-items: center;
@@ -9,11 +9,13 @@ const Container = styled.View`
   background: white;
 `;
 
-const Parents = () => {
+const Parents = (props) => {
+const {navigation, route} = props;
 
   return (
     <Container>
       <Text>PARENTS</Text>
+      <Button title="Back" onPress={() => navigation.navigate('Home')} />
     </Container>
   );
 };

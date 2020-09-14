@@ -22,7 +22,7 @@ const MeditateAudio = (props) => {
         autoPlay={true}
         resizeMode="cover"
       />
-      <Button title="Back" onPress={() => navigation.navigate('Meditate')} />
+      <Button title="Back" onPress={() => navigation.navigate('Home')} />
     </Container>
   );
 };
