@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 import AnimationRenderer from '../components/AnimationRenderer';
 import animationData from '../assets/testMorph.json';
@@ -15,17 +16,48 @@ const customStyles = {
   height: '100%',
 };
 
-const Home = () => {
-
+const Home = (props) => {
+  const { navigation } = props
   return (
-    <Container >
-      <AnimationRenderer
-        animationData={animationData}
-        autoPlay={true}
-        resizeMode="cover"
-        customStyles={customStyles}></AnimationRenderer>
+    <Container>
+      <Text>I am Home</Text>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('MeditateAudio')}>
+        <Text >Go to Meditate</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Focus')}>
+        <Text >Go to Focus</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('More')}>
+        <Text >Go to More</Text>
+      </TouchableOpacity>
     </Container>
   );
 };
 
 export default Home;
+
+
+  /* <AnimationRenderer
+        animationData={animationData}
+        autoPlay={true}
+        resizeMode="cover"
+        customStyles={customStyles}></AnimationRenderer> */
+
+ /* <TouchableOpacity
+        onPress={() => navigation.navigate('Meditate')}>
+        <Text>Go to Meditate</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Focus')}>
+        <Text>Go to Focus</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('More')}>
+        <Text>Go to More</Text>
+      </TouchableOpacity> */
+
+  /* </Container> */
+
