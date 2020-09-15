@@ -2,6 +2,8 @@ import React, {useContext} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+// import { Icon } from 'react-native-elements'
 import AnimationRenderer from '../components/AnimationRenderer';
 import animationData from '../assets/testMorph.json';
 
@@ -49,7 +51,7 @@ const Home = (props) => {
         <TouchableOpacity
           style={styles.buttonStyles}
           onPress={() => navigation.navigate('Meditate')}>
-          <Text>Go to Meditate</Text>
+            <Icon name='credit-card-refund'></Icon>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyles}

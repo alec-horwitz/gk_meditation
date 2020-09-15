@@ -12,3 +12,10 @@ after npm installing packages, i.e. linear-gradient, ios can be weird about it, 
 
 linear gradient generator:
 https://cssgradient.io/
+
+adding react vector icons is more then just npm install package, you have to dump font files into xcode (takes 20-30 mins):
+
+step 1:
+https://github.com/oblador/react-native-vector-icons#installation
+step 2:
+https://medium.com/@vimniky/how-to-use-vector-icons-in-your-react-native-project-8212ac6a8f06
