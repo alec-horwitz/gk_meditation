@@ -50,17 +50,17 @@ const Home = (props) => {
         <TouchableOpacity
           style={styles.buttonStyles}
           onPress={() => navigation.navigate('Meditate')}>
-            <Icon style={styles.iconStyles} name='credit-card-refund'></Icon>
+        <Icon style={styles.iconStyles} name='head-heart'></Icon>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyles}
           onPress={() => navigation.navigate('Focus')}>
-          <Icon style={styles.iconStyles} name='credit-card-refund'></Icon>
+            <Icon style={styles.iconStyles} name='head-flash'></Icon>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyles}
           onPress={() => navigation.navigate('More')}>
-          <Icon style={styles.iconStyles} name='credit-card-refund'></Icon>
+          <Icon style={styles.iconStyles} name='script-text'></Icon>
         </TouchableOpacity>
       </View>
     </LinearGradient>
