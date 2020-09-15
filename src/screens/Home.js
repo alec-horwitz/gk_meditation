@@ -1,5 +1,11 @@
-import React, {useContext} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import React, {useContext,useRef, useEffect } from 'react';
+import {
+  StyleSheet,
+  View,
+  Animated,    
+  Button,
+  Text,
+  TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -31,7 +37,20 @@ const gradientColors = {
   topPastelPink: '#eeaeca',
 };
 
+
 const Home = (props) => {
+  const opacity = new Animated.Value(0);
+
+  // useEffect(() => {
+  //   Animated.timing(position, {
+  //     toValue: {x: 100, y: 100},
+  //     duration: 500,
+  //     delay: 300
+  //   }).start();
+  // }, []);
+
+
+
   const {navigation} = props;
   return (
     <LinearGradient
@@ -45,7 +64,10 @@ const Home = (props) => {
       end={{x: 0, y: 0}}>
       <View style={styles.circle}></View>
       <View style={styles.flexContainer}>
-      </View>
+      {/* <Animated.View style={{opacity}}>
+        <Icon name='play-pause' style={styles.iconStyles}></Icon>
+        </Animated.View> */}
+        </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.buttonStyles}
@@ -72,7 +94,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   flexContainer: {
-    flex: 0.75
+    flex: 0.75,
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   buttonContainer: {
     flex: 0.20,
@@ -101,7 +126,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 137, 96, 0.6)',
     position: 'absolute',
     top: -300,
-    left: -175,
+    left: -200,
   },
   iconStyles: {
     color: 'white',
