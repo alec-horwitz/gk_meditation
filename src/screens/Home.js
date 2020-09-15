@@ -45,23 +45,22 @@ const Home = (props) => {
       end={{x: 0, y: 0}}>
       <View style={styles.circle}></View>
       <View style={styles.flexContainer}>
-
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.buttonStyles}
           onPress={() => navigation.navigate('Meditate')}>
-            <Icon name='credit-card-refund'></Icon>
+            <Icon style={styles.iconStyles} name='credit-card-refund'></Icon>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyles}
           onPress={() => navigation.navigate('Focus')}>
-          <Text>Go to Focus</Text>
+          <Icon style={styles.iconStyles} name='credit-card-refund'></Icon>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyles}
           onPress={() => navigation.navigate('More')}>
-          <Text>Go to More</Text>
+          <Icon style={styles.iconStyles} name='credit-card-refund'></Icon>
         </TouchableOpacity>
       </View>
     </LinearGradient>
@@ -76,7 +75,7 @@ const styles = StyleSheet.create({
     flex: 0.75
   },
   buttonContainer: {
-    flex: 0.25,
+    flex: 0.20,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -103,6 +102,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -300,
     left: -175,
+  },
+  iconStyles: {
+    color: 'white',
+    fontSize: 75
   },
 });
 

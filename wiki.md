@@ -19,3 +19,7 @@ step 1:
 https://github.com/oblador/react-native-vector-icons#installation
 step 2:
 https://medium.com/@vimniky/how-to-use-vector-icons-in-your-react-native-project-8212ac6a8f06
+step 3: 
+import which icon collection you want
+list of available icons by library here:
+https://oblador.github.io/react-native-vector-icons/
