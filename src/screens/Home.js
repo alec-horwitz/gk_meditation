@@ -9,21 +9,8 @@ import {
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-// import { Icon } from 'react-native-elements'
 import AnimationRenderer from '../components/AnimationRenderer';
 import animationData from '../assets/testMorph.json';
-
-const Container = styled.View`
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  background: white;
-`;
-
-const customStyles = {
-  width: '100%',
-  height: '100%',
-};
 
 const gradientColors = {
   bottomDeepBlue: '#2d24bd',
@@ -48,8 +35,6 @@ const Home = (props) => {
   //     delay: 300
   //   }).start();
   // }, []);
-
-
 
   const {navigation} = props;
   return (
@@ -109,7 +94,7 @@ const styles = StyleSheet.create({
   buttonStyles: {
     width: '30%%',
     height: '75%',
-    borderWidth: 2,
+    borderWidth: 3,
     borderRadius: 20,
     borderRightColor: 'rgba(255, 255, 255, 0.25)',
     borderLeftColor: 'rgba(255, 255, 255, 0.20)',
@@ -135,24 +120,3 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
-
-/* <AnimationRenderer
-        animationData={animationData}
-        autoPlay={true}
-        resizeMode="cover"
-        customStyles={customStyles}></AnimationRenderer> */
-
-/* <TouchableOpacity
-        onPress={() => navigation.navigate('Meditate')}>
-        <Text>Go to Meditate</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Focus')}>
-        <Text>Go to Focus</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('More')}>
-        <Text>Go to More</Text>
-      </TouchableOpacity> */
-
-/* </Container> */
