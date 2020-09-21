@@ -15,7 +15,7 @@ const {navigation, route} = props;
   return (
     <Container>
       <Text>How To</Text>
-      <Button title="Back" onPress={() => navigation.navigate('Home')} />
+      <Button title="Back" onPress={() => navigation.goBack()} />
     </Container>
   );
 };

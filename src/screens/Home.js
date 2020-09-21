@@ -1,16 +1,15 @@
-import React, {useContext,useRef, useEffect } from 'react';
+import React, {useContext, useRef, useEffect } from 'react';
 import {
   StyleSheet,
   View,
   Animated,    
   Button,
   Text,
-  TouchableOpacity} from 'react-native';
+  TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import AnimationRenderer from '../components/AnimationRenderer';
-import animationData from '../assets/testMorph.json';
+import {ThemeContext} from '../context/ThemeStore'
 
 const gradientColors = {
   bottomDeepBlue: '#2d24bd',
@@ -24,34 +23,22 @@ const gradientColors = {
   topPastelPink: '#eeaeca',
 };
 
-
 const Home = (props) => {
-  const opacity = new Animated.Value(0);
+  const { route, navigation } = props;
+  const context = React.useContext(ThemeContext);
+  useEffect(() => {
+    context.switchTheme(route.name);
+  }, []);
 
-  // useEffect(() => {
-  //   Animated.timing(position, {
-  //     toValue: {x: 100, y: 100},
-  //     duration: 500,
-  //     delay: 300
-  //   }).start();
-  // }, []);
-
-  const {navigation} = props;
   return (
     <LinearGradient
-      colors={[
-        gradientColors.bottomDeepBlue,
-        gradientColors.bottomMidBlue,
-        gradientColors.topLightPeach,]}
+      colors={context.theme}
       style={styles.container}
       locations={[0.08, 0.55, 1]}
       start={{x: 1, y: 1}}
       end={{x: 0, y: 0}}>
       <View style={styles.circle}></View>
       <View style={styles.flexContainer}>
-      {/* <Animated.View style={{opacity}}>
-        <Icon name='play-pause' style={styles.iconStyles}></Icon>
-        </Animated.View> */}
         </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
@@ -79,7 +66,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   flexContainer: {
-    flex: 0.75,
+    flex: .75,
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'center'

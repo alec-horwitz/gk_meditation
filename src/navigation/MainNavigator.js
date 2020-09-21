@@ -7,6 +7,9 @@ import Home from '../screens/Home'
 import Meditate from '../screens/Meditate'
 import Focus from '../screens/Focus'
 import More from '../screens/More'
+import Parents from '../screens/Parents'
+import HowTo from '../screens/HowTo'
+import Legal from '../screens/Legal'
 
 const Stack = createStackNavigator()
 
@@ -34,6 +37,21 @@ function MainNavigator() {
           name='More'
           component={More}
           options={{ title: 'More Screen' }}
+        />
+        <Stack.Screen
+          name='Parents'
+          component={Parents}
+          options={{ title: 'Parents Screen' }}
+        />
+        <Stack.Screen
+          name='HowTo'
+          component={HowTo}
+          options={{ title: 'HowTo Screen' }}
+        />
+        <Stack.Screen
+          name='Legal'
+          component={Legal}
+          options={{ title: 'Legal Screen' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
