@@ -1,0 +1,6 @@
+module Pods_gk_meditation_gk_meditationTests {
+  umbrella header "Pods-gk_meditation-gk_meditationTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
