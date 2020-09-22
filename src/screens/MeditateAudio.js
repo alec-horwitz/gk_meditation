@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import {ThemeContext} from '../context/ThemeStore';
 import AnimationRenderer from '../components/AnimationRenderer';
 import TrackPlayer from 'react-native-track-player';
-import animationData from '../assets/Countdown_fixed.json';
+import animationData from '../assets/cloudAnim.json';
 import {Text, Button} from 'react-native';
 
 const Container = styled.View`
@@ -27,7 +27,7 @@ const trackPlayerInit = async () => {
 
 const MeditateAudio = (props) => {
   const {theme} = useContext(ThemeContext);
-  const {navigation, route} = props;
+  const {navigation, title} = props;
 
   const animationView = useRef(null);
 
@@ -41,27 +41,33 @@ const MeditateAudio = (props) => {
     TrackPlayer.play();
   };
 
-  const handleResume = () => {
-    animationView.current.resume();
-    TrackPlayer.resume();
+  const handleBackButton = () => {
+    navigation.navigate('Meditate');
+    animationView.current.reset();
+    TrackPlayer.reset();
+    console.log('AUDIO RESET');
   };
 
   //state to manage whether track player is initialized or not
   const [isTrackPlayerInit, setIsTrackPlayerInit] = useState(false);
 
+  console.log(props);
   //initialize the TrackPlayer when the App component is mounted
   useEffect(() => {
-    console.log('TEST');
+    console.log('AUDIO RAN');
     const startPlayer = async () => {
       let isInit = await trackPlayerInit();
       setIsTrackPlayerInit(isInit);
+      if (isInit) {
+        handlePlay();
+      }
     };
     startPlayer();
-  }, []);
+  });
 
   return (
     <Container theme={theme}>
-      <Text>{route.params ? route.params.name : 'Timer'}</Text>
+      <Text>{props.title}</Text>
       <AnimationRenderer
         animationData={animationData}
         resizeMode="cover"
@@ -74,8 +80,7 @@ const MeditateAudio = (props) => {
         onPress={() => handlePlay()}
       />
       <Button title="Pause" onPress={() => handlePause()} />
-      <Button title="Resume" onPress={() => handleResume()} />
-      <Button title="Back" onPress={() => navigation.navigate('Meditate')} />
+      <Button title="Back" onPress={() => handleBackButton()} />
     </Container>
   );
 };

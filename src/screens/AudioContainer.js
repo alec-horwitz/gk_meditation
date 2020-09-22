@@ -1,8 +1,7 @@
 import React, {useContext} from 'react';
 import styled from 'styled-components/native';
 import {ThemeContext} from '../context/ThemeStore';
-import AnimationRenderer from '../components/AnimationRenderer';
-import animationData from '../assets/cloudUpDownMove.json';
+import MeditateAudio from './MeditateAudio';
 
 const Container = styled.View`
   align-items: center;
@@ -11,24 +10,22 @@ const Container = styled.View`
   background: ${(props) => props.theme.gradientTop};
 `;
 
-const customStyles = {
-  width: '100%',
-  height: '100%',
-};
-
-const Home = () => {
+const AudioContainer = (props) => {
   const {theme} = useContext(ThemeContext);
+  const {navigation, route} = props;
+  let title = '';
+  console.log(props);
+  if (route.params && route.params.name) {
+    title = route.params.name;
+  } else {
+    title = route.params.test;
+  }
 
   return (
     <Container theme={theme}>
-      <AnimationRenderer
-        animationData={animationData}
-        autoPlay={true}
-        resizeMode="cover"
-        customStyles={customStyles}
-      />
+      <MeditateAudio title={title} navigation={navigation} />
     </Container>
   );
 };
 
-export default Home;
+export default AudioContainer;

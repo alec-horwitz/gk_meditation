@@ -19,7 +19,8 @@ const MeditateTimeLine = ({navigation}) => {
         <View key={data.id}>
           <Button
             title={data.name}
-            onPress={() => navigation.navigate('Bed Time', data)}></Button>
+            onPress={() => navigation.navigate('Bed Time', data)}
+          />
         </View>
       ))}
       <Button title="Back" onPress={() => navigation.navigate('Home')} />
