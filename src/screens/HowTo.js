@@ -1,6 +1,16 @@
-import React, {useContext} from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
+import {
+  StyleSheet,
+  View,
+  Animated,
+  Button,
+  Text,
+  TouchableOpacity
+} from 'react-native';
 import styled from 'styled-components/native';
-import {Text, Button} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { ThemeContext } from '../context/ThemeStore'
 
 const Container = styled.View`
   align-items: center;
@@ -10,14 +20,34 @@ const Container = styled.View`
 `;
 
 const HowTo = (props) => {
-const {navigation, route} = props;
+  const { navigation, route } = props;
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <Container>
-      <Text>How To</Text>
-      <Button title="Back" onPress={() => navigation.goBack()} />
-    </Container>
+    <LinearGradient
+      colors={theme}
+      style={styles.container}
+      locations={[0.08, 0.55, 1]}
+      start={{ x: 1, y: 1 }}
+      end={{ x: 0, y: 0 }}>
+      <View style={styles.flexContainer}>
+        <Text>HowTo</Text>
+        <Button title="Back" onPress={() => navigation.goBack()} />
+      </View>
+    </LinearGradient>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  flexContainer: {
+    flex: 1,
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+})
 
 export default HowTo;

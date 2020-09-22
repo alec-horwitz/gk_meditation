@@ -11,28 +11,13 @@ import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {ThemeContext} from '../context/ThemeStore'
 
-const gradientColors = {
-  bottomDeepBlue: '#2d24bd',
-  bottomMidBlue: '#3963c7',
-  topLightPeach: '#ff8960',
-  bottomTeal: '#22c1c3',
-  topGold: '#fdbb2d',
-  bottomBlue: '#3f5efb',
-  topMagenta: '#fc466b',
-  bottomPastelBlue: '#94bbe9',
-  topPastelPink: '#eeaeca',
-};
-
 const Home = (props) => {
   const { route, navigation } = props;
-  const context = React.useContext(ThemeContext);
-  useEffect(() => {
-    context.switchTheme(route.name);
-  }, []);
+  const {theme} = useContext(ThemeContext)
 
   return (
     <LinearGradient
-      colors={context.theme}
+      colors={theme}
       style={styles.container}
       locations={[0.08, 0.55, 1]}
       start={{x: 1, y: 1}}
