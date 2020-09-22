@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
+import {View} from 'react-native';
 import styled from 'styled-components/native';
 
 const ThemeContext = React.createContext();
@@ -17,14 +17,16 @@ const ThemeProvider = ({children}) => {
     topPastelPink: '#eeaeca',
   };
 
-  const NavButton = styled.TouchableOpacity`
-    width: 30%;
-    height: 75%;
-    border: 3px solid white;
-    background: transparent;
-    align-items: center;
-    justify-content: center;
-  `;
+  const Container = styled.View({
+    flex: 1,
+  });
+
+  const FlexContainer = styled.View({
+    flex: 1,
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  });
 
   const themes = {
     home: [
@@ -41,7 +43,8 @@ const ThemeProvider = ({children}) => {
       gradientTop: '#E79E84',
       gradientBottom: '#E5CB99',
     },
-    NavButton,
+    Container,
+    FlexContainer,
   };
 
   return (

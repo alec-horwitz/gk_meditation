@@ -15,16 +15,16 @@ import {ThemeContext} from '../context/ThemeStore';
 
 const More = (props) => {
   const {navigation, route} = props;
-  const theme = useContext(ThemeContext);
+  const {home, FlexContainer} = useContext(ThemeContext);
 
   return (
     <LinearGradient
-      colors={theme.home}
+      colors={home}
       style={styles.container}
       locations={[0.08, 0.55, 1]}
       start={{x: 1, y: 1}}
       end={{x: 0, y: 0}}>
-      <View style={styles.flexContainer}>
+      <FlexContainer>
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.buttonStyles}
@@ -56,7 +56,7 @@ const More = (props) => {
             <Text style={styles.textStyle}>Legal</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </FlexContainer>
     </LinearGradient>
   );
 };
@@ -64,12 +64,6 @@ const More = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  flexContainer: {
-    flex: 1,
-    alignContent: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   buttonContainer: {
     display: 'flex',
