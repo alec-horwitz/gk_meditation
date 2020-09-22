@@ -11,6 +11,7 @@ import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ThemeContext } from '../context/ThemeStore'
+import Carousel from '../components/Carousel'
 
 const Container = styled.View`
   align-items: center;
@@ -30,24 +31,40 @@ const Parents = (props) => {
       locations={[0.08, 0.55, 1]}
       start={{ x: 1, y: 1 }}
       end={{ x: 0, y: 0 }}>
-      <View style={styles.flexContainer}>
+      <Carousel
+        style="slides"
+        itemsPerInterval={1}
+        items={[{
+          title: 'Who we are',
+          copy: 'lorem ipsum here'
+        }, {
+          title: 'What we are doing',
+          copy: 'lorem ipsum here'
+        }, {
+          title: 'Why we are doing it',
+          copy: 'lorem ipsum here'
+        }, {
+          title: 'Get in touch',
+          copy: 'lorem ipsum here'
+        }
+        ]}
+      />
+      {/* <View style={styles.flexContainer}>
         <Text>Parents</Text>
         <Button title="Back" onPress={() => navigation.goBack()} />
-      </View>
+      </View> */}
     </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    display: 'flex',
     flex: 1,
-  },
-  flexContainer: {
-    flex: 1,
+    justifyContent: 'center',
     alignContent: 'center',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
+    alignItems: 'center'
+  },
 })
 
 export default Parents;

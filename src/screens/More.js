@@ -6,7 +6,8 @@ import {
   Animated,
   Button,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  Linking
 } from 'react-native';
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
@@ -38,8 +39,13 @@ const More = (props) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.buttonStyles}
-            onPress={() => navigation.navigate('101')}>
+            onPress={() => navigation.navigate('HowTo')}>
             <Text style={styles.textStyle}>101</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.buttonStyles}
+            onPress={() => Linking.openURL('mailto:frank@thefrankharvey.com?subject=Suggestion&body=Description')}>
+            <Text style={styles.textStyle}>Suggestion Box</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.buttonStyles}
@@ -76,12 +82,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    shadowColor: "#000",
+    shadowColor: "#15114D",
     shadowOffset: {
       width: 0,
       height: 9,
     },
-    shadowOpacity: 0.50,
+    shadowOpacity: 0.60,
     shadowRadius: 12.35,
 
     elevation: 19
