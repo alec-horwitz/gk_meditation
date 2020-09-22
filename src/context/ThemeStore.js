@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  Animated,    
-  Button,
-  Text,
-  TouchableOpacity } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import React from 'react';
+import {TouchableOpacity} from 'react-native';
+import styled from 'styled-components/native';
 
 const ThemeContext = React.createContext();
 
-const ThemeProvider = ({ children }) => {
-
+const ThemeProvider = ({children}) => {
   const gradientColors = {
     bottomDeepBlue: '#2d24bd',
     bottomMidBlue: '#3963c7',
@@ -24,36 +17,36 @@ const ThemeProvider = ({ children }) => {
     topPastelPink: '#eeaeca',
   };
 
+  const NavButton = styled.TouchableOpacity`
+    width: 30%;
+    height: 75%;
+    border: 3px solid white;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+  `;
+
   const themes = {
-    Home:
-      [ gradientColors.bottomDeepBlue,
-        gradientColors.bottomMidBlue,
-        gradientColors.topLightPeach ],
-    themeTwo: [ gradientColors.bottomMidBlue,
+    home: [
+      gradientColors.bottomDeepBlue,
+      gradientColors.bottomMidBlue,
+      gradientColors.topLightPeach,
+    ],
+    themeTwo: [
+      gradientColors.bottomMidBlue,
       gradientColors.bottomPastelBlue,
-      gradientColors.topPastelPink ],
+      gradientColors.topPastelPink,
+    ],
     themeThree: {
       gradientTop: '#E79E84',
       gradientBottom: '#E5CB99',
     },
-  };
-
-  const [theme, setTheme] = useState(themes['Home']);
-
-  const switchTheme = (theme) => {
-    console.log('them from switchtheme ', theme)
-    if (theme in themes) {
-      setTheme(themes[theme]);
-    } else {
-      console.log('unknown theme');
-    }
+    NavButton,
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, switchTheme }}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={themes}>{children}</ThemeContext.Provider>
   );
 };
 
-export { ThemeProvider, ThemeContext };
+export {ThemeProvider, ThemeContext};

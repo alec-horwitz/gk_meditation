@@ -1,46 +1,33 @@
-import React, {useContext, useRef, useEffect } from 'react';
-import {
-  StyleSheet,
-  View,
-  Animated,    
-  Button,
-  Text,
-  TouchableOpacity } from 'react-native';
+import React, {useContext} from 'react';
+import {StyleSheet, View, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {ThemeContext} from '../context/ThemeStore'
+import {ThemeContext} from '../context/ThemeStore';
 
 const Home = (props) => {
-  const { route, navigation } = props;
-  const {theme} = useContext(ThemeContext)
+  const {route, navigation} = props;
+  const theme = useContext(ThemeContext);
 
   return (
     <LinearGradient
-      colors={theme}
+      colors={theme.home}
       style={styles.container}
       locations={[0.08, 0.55, 1]}
       start={{x: 1, y: 1}}
       end={{x: 0, y: 0}}>
-      <View style={styles.circle}></View>
-      <View style={styles.flexContainer}>
-        </View>
+      <View style={styles.circle} />
+      <View style={styles.flexContainer} />
       <View style={styles.buttonContainer}>
-        <TouchableOpacity
-          style={styles.buttonStyles}
-          onPress={() => navigation.navigate('Meditate')}>
-        <Icon style={styles.iconStyles} name='head-heart'></Icon>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonStyles}
-          onPress={() => navigation.navigate('Focus')}>
-            <Icon style={styles.iconStyles} name='head-flash'></Icon>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonStyles}
-          onPress={() => navigation.navigate('More')}>
-          <Icon style={styles.iconStyles} name='script-text'></Icon>
-        </TouchableOpacity>
+        <theme.NavButton onPress={() => navigation.navigate('Meditate')}>
+          <Icon style={styles.iconStyles} name="head-heart" />
+        </theme.NavButton>
+        <theme.NavButton onPress={() => navigation.navigate('Focus')}>
+          <Icon style={styles.iconStyles} name="head-flash" />
+        </theme.NavButton>
+        <theme.NavButton onPress={() => navigation.navigate('More')}>
+          <Icon style={styles.iconStyles} name="script-text" />
+        </theme.NavButton>
       </View>
     </LinearGradient>
   );
@@ -51,17 +38,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   flexContainer: {
-    flex: .75,
+    flex: 0.75,
     alignContent: 'center',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   buttonContainer: {
-    flex: 0.20,
+    flex: 0.2,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   buttonStyles: {
     width: '30%%',
@@ -87,7 +74,7 @@ const styles = StyleSheet.create({
   },
   iconStyles: {
     color: 'white',
-    fontSize: 75
+    fontSize: 75,
   },
 });
 

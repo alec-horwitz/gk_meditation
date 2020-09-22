@@ -1,18 +1,16 @@
-import React from 'react'
-import { View, ScrollView, Text, StyleSheet } from 'react-native'
-import { Stat } from './Stat';
-import { Slide } from './Slide';
+import React, {useState} from 'react';
+import {View, ScrollView, Text, StyleSheet} from 'react-native';
+import {Stat} from './Stat';
+import {Slide} from './Slide';
 
 export const Carousel = (props) => {
+  const {items, style} = props;
+  const itemsPerInterval =
+    props.itemsPerInterval === undefined ? 1 : props.itemsPerInterval;
 
-  const { items, style } = props;
-  const itemsPerInterval = props.itemsPerInterval === undefined
-    ? 1
-    : props.itemsPerInterval;
-
-  const [interval, setInterval] = React.useState(1);
-  const [intervals, setIntervals] = React.useState(1);
-  const [width, setWidth] = React.useState(0);
+  const [interval, setInterval] = useState(1);
+  const [intervals, setIntervals] = useState(1);
+  const [width, setWidth] = useState(0);
 
   const init = (width) => {
     // initialise width
@@ -20,7 +18,7 @@ export const Carousel = (props) => {
     // initialise total intervals
     const totalItems = items.length;
     setIntervals(Math.ceil(totalItems / itemsPerInterval));
-  }
+  };
 
   const getInterval = (offset) => {
     for (let i = 1; i <= intervals; i++) {
@@ -31,7 +29,7 @@ export const Carousel = (props) => {
         return i;
       }
     }
-  }
+  };
 
   let bullets = [];
   for (let i = 1; i <= intervals; i++) {
@@ -40,11 +38,10 @@ export const Carousel = (props) => {
         key={i}
         style={{
           ...styles.bullet,
-          opacity: interval === i ? 0.5 : 0.1
-        }}
-      >
+          opacity: interval === i ? 0.5 : 0.1,
+        }}>
         &bull;
-      </Text>
+      </Text>,
     );
   }
 
@@ -52,44 +49,32 @@ export const Carousel = (props) => {
     <View style={styles.container}>
       <ScrollView
         horizontal={true}
-        contentContainerStyle={{ ...styles.scrollView, width: `${100 * intervals}%` }}
+        contentContainerStyle={{
+          ...styles.scrollView,
+          width: `${100 * intervals}%`,
+        }}
         showsHorizontalScrollIndicator={false}
         onContentSizeChange={(w, h) => init(w)}
-        onScroll={data => {
+        onScroll={(data) => {
           setWidth(data.nativeEvent.contentSize.width);
           setInterval(getInterval(data.nativeEvent.contentOffset.x));
         }}
         scrollEventThrottle={200}
         pagingEnabled
-        decelerationRate="fast"
-      >
+        decelerationRate="fast">
         {items.map((item, index) => {
           switch (style) {
             case 'stats':
-              return (
-                <Stat
-                  key={index}
-                  label={item.label}
-                  value={item.value}
-                />
-              );
+              return <Stat key={index} label={item.label} value={item.value} />;
             default:
-              return (
-                <Slide
-                  key={index}
-                  title={item.title}
-                  copy={item.copy}
-                />
-              );
+              return <Slide key={index} title={item.title} copy={item.copy} />;
           }
         })}
       </ScrollView>
-      <View style={styles.bullets}>
-        {bullets}
-      </View>
+      <View style={styles.bullets}>{bullets}</View>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   statsHead: {
@@ -107,7 +92,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     shadowOffset: {
       width: 0,
-      height: 5
+      height: 5,
     },
   },
   scrollView: {
@@ -128,7 +113,7 @@ const styles = StyleSheet.create({
   bullet: {
     paddingHorizontal: 5,
     fontSize: 40,
-  }
+  },
 });
 
 export default Carousel;

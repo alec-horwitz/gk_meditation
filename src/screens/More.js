@@ -1,5 +1,4 @@
-
-import React, { useContext, useRef, useEffect } from 'react';
+import React, {useContext, useRef, useEffect} from 'react';
 import {
   StyleSheet,
   View,
@@ -7,24 +6,24 @@ import {
   Button,
   Text,
   TouchableOpacity,
-  Linking
+  Linking,
 } from 'react-native';
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ThemeContext } from '../context/ThemeStore'
+import {ThemeContext} from '../context/ThemeStore';
 
 const More = (props) => {
-  const { navigation, route } = props;
-  const { theme } = useContext(ThemeContext);
+  const {navigation, route} = props;
+  const theme = useContext(ThemeContext);
 
   return (
     <LinearGradient
-      colors={theme}
+      colors={theme.home}
       style={styles.container}
       locations={[0.08, 0.55, 1]}
-      start={{ x: 1, y: 1 }}
-      end={{ x: 0, y: 0 }}>
+      start={{x: 1, y: 1}}
+      end={{x: 0, y: 0}}>
       <View style={styles.flexContainer}>
         <View style={styles.buttonContainer}>
           <TouchableOpacity
@@ -44,7 +43,11 @@ const More = (props) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.buttonStyles}
-            onPress={() => Linking.openURL('mailto:frank@thefrankharvey.com?subject=Suggestion&body=Description')}>
+            onPress={() =>
+              Linking.openURL(
+                'mailto:frank@thefrankharvey.com?subject=Suggestion&body=Description',
+              )
+            }>
             <Text style={styles.textStyle}>Suggestion Box</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -66,13 +69,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignContent: 'center',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   buttonContainer: {
     display: 'flex',
     flexDirection: 'column',
     width: '80%',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
   },
   buttonStyles: {
     margin: 15,
@@ -82,23 +85,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    shadowColor: "#15114D",
+    shadowColor: '#15114D',
     shadowOffset: {
       width: 0,
       height: 9,
     },
-    shadowOpacity: 0.60,
+    shadowOpacity: 0.6,
     shadowRadius: 12.35,
 
-    elevation: 19
+    elevation: 19,
   },
   textStyle: {
     fontFamily: 'System',
     fontSize: 30,
     fontWeight: 'bold',
-    color: '#3963c7'
-  }
-})
+    color: '#3963c7',
+  },
+});
 
 // width: '30%%',
 // height: '75%',
