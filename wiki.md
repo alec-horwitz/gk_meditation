@@ -3,6 +3,9 @@ react native nav has quite a learning curve -
 - then started fresh with a stack nav - seems more customizable - we will see - this tutorial helped:
 https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1
 
+git squash, rebase, PR:
+before PR: add, commit, push, rebase origin master, squash - rebas -i head, force push
+
 when running into errors like:
 Invariant Violation: Module AppRegistry is not a registered callable module (calling runApplication)
 after installing packages, pods, or restarting the server, kill node process, and clear cache then npm start again: 
@@ -23,3 +26,22 @@ step 3:
 import which icon collection you want
 list of available icons by library here:
 https://oblador.github.io/react-native-vector-icons/
+
+####################################
+9-22-20 pair program
+frank todo/focus
+Admin pages then:
+Character     ----\
+Storyboard    -----\
+Script        -----/  get creative ready to handoff to anim pro
+Trello        ----/
+Custom icons
+
+Later features
+Interactivity - unity, json?
+More meditations - timeline
+Vibe check
+###################################
+
+
+

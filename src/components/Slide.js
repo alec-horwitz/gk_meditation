@@ -1,9 +1,9 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, Button } from 'react-native'
 
 export const Slide = (props) => {
+  const { navigation } = props;
   const screenHeight = Math.round(Dimensions.get('window').height);
-  console.log(screenHeight)
   const { title, copy } = props;
 
   return (
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    // 896 should be a dynamically retrieved screen/device height but its not wrking
     height: 896 * 0.8,
   },
   slideTitleText: {

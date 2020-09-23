@@ -16,12 +16,13 @@ const NavButton = styled.TouchableOpacity`
 
 const Home = (props) => {
   const {navigation} = props;
-  const {home, Container, FlexContainer} = useContext(ThemeContext);
+  const {home, Container, FlexContainer, gradientContainer } = useContext(ThemeContext);
+  const gradientStyle = gradientContainer.style
 
   return (
     <LinearGradient
       colors={home}
-      style={styles.container}
+      style={gradientStyle}
       locations={[0.08, 0.55, 1]}
       start={{x: 1, y: 1}}
       end={{x: 0, y: 0}}>

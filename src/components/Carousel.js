@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
-import {View, ScrollView, Text, StyleSheet} from 'react-native';
-import {Stat} from './Stat';
-import {Slide} from './Slide';
+import React, {useContext, useState} from 'react';
+import { View, ScrollView, Text, StyleSheet, Button } from 'react-native';
+import { Slide } from './Slide';
+import {ThemeContext} from '../context/ThemeStore';
 
 export const Carousel = (props) => {
-  const {items, style} = props;
+  const { navigation } = props;
+  const { items, style } = props;
   const itemsPerInterval =
     props.itemsPerInterval === undefined ? 1 : props.itemsPerInterval;
 
@@ -19,6 +20,14 @@ export const Carousel = (props) => {
     const totalItems = items.length;
     setIntervals(Math.ceil(totalItems / itemsPerInterval));
   };
+
+  const mapItems = items => {
+    itemList = items.map((item, index) => {
+      const { title, copy } = item
+      return <Slide key={index} title={title} copy={copy} navigation={navigation} />;
+    })
+    return itemList
+  }
 
   const getInterval = (offset) => {
     for (let i = 1; i <= intervals; i++) {
@@ -38,7 +47,7 @@ export const Carousel = (props) => {
         key={i}
         style={{
           ...styles.bullet,
-          opacity: interval === i ? 0.5 : 0.1,
+          opacity: interval === i ? 0.7 : 0.3,
         }}>
         &bull;
       </Text>,
@@ -62,16 +71,10 @@ export const Carousel = (props) => {
         scrollEventThrottle={200}
         pagingEnabled
         decelerationRate="fast">
-        {items.map((item, index) => {
-          switch (style) {
-            case 'stats':
-              return <Stat key={index} label={item.label} value={item.value} />;
-            default:
-              return <Slide key={index} title={item.title} copy={item.copy} />;
-          }
-        })}
+        {mapItems(items)}
       </ScrollView>
       <View style={styles.bullets}>{bullets}</View>
+      <Button title="Back" onPress={() => navigation.goBack()} />
     </View>
   );
 };

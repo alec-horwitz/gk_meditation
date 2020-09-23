@@ -11,6 +11,7 @@ import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {ThemeContext} from '../context/ThemeStore';
+import Carousel from '../components/Carousel';
 
 const Container = styled.View`
   align-items: center;
@@ -21,27 +22,36 @@ const Container = styled.View`
 
 const Legal = (props) => {
   const {navigation, route} = props;
-  const {home, FlexContainer} = useContext(ThemeContext);
+  const {home, FlexContainer, gradientContainer} = useContext(ThemeContext);
 
   return (
     <LinearGradient
       colors={home}
-      style={styles.container}
+      style={gradientContainer.style}
       locations={[0.08, 0.55, 1]}
       start={{x: 1, y: 1}}
       end={{x: 0, y: 0}}>
-      <FlexContainer>
-        <Text>Legal</Text>
-        <Button title="Back" onPress={() => navigation.goBack()} />
-      </FlexContainer>
+      <Carousel
+        navigation={navigation}
+        style="slides"
+        itemsPerInterval={1}
+        items={[
+          {
+            title: 'Intro',
+            copy: 'lorem ipsum here',
+          },
+          {
+            title: 'Privacy',
+            copy: 'lorem ipsum here',
+          },
+          {
+            title: 'Terms',
+            copy: 'lorem ipsum here',
+          }
+        ]}
+      />
     </LinearGradient>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default Legal;

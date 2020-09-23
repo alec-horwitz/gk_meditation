@@ -6,16 +6,18 @@ import {ThemeContext} from '../context/ThemeStore';
 import Carousel from '../components/Carousel';
 
 const Parents = (props) => {
-  const theme = useContext(ThemeContext);
-
+  const {navigation, route} = props;
+  const {home, gradientContainer} = useContext(ThemeContext);
+  const gradientStyle = gradientContainer.style
   return (
     <LinearGradient
-      colors={theme.home}
-      style={styles.container}
+      colors={home}
+      style={gradientStyle}
       locations={[0.08, 0.55, 1]}
       start={{x: 1, y: 1}}
       end={{x: 0, y: 0}}>
       <Carousel
+        navigation={navigation}
         style="slides"
         itemsPerInterval={1}
         items={[
@@ -37,22 +39,8 @@ const Parents = (props) => {
           },
         ]}
       />
-      {/* <View style={styles.flexContainer}>
-        <Text>Parents</Text>
-        <Button title="Back" onPress={() => navigation.goBack()} />
-      </View> */}
     </LinearGradient>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default Parents;
