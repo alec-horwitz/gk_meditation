@@ -1,5 +1,5 @@
-import React, {useEffect, useRef} from 'react';
-import {View, Text, Button} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 import LottieView from 'lottie-react-native';
 
 const AnimationRenderer = (props) => {

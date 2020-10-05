@@ -1,8 +1,9 @@
 import React, {useContext, useRef, useState, useEffect} from 'react';
 import styled from 'styled-components/native';
 import AnimationRenderer from '../components/AnimationRenderer';
+import {useTrackPlayerProgress} from 'react-native-track-player/lib/hooks';
 import TrackPlayer from 'react-native-track-player';
-import animationData from '../assets/Countdown_fixed.json';
+import animationData from '../assets/Jellyfish.json';
 import {Text, Button} from 'react-native';
 
 const Container = styled.View`
@@ -24,41 +25,41 @@ const trackPlayerInit = async () => {
   return true;
 };
 
+//useTrackPlayerProgress is a hook which provides the current position and duration of the track player.
+//These values will update every 250ms
+
 const Meditate = (props) => {
   const {navigation, route} = props;
 
   const animationView = useRef(null);
 
   const handlePause = () => {
-    animationView.current.pause();
     TrackPlayer.pause();
+    animationView.current.pause();
+    console.log('handle pause');
   };
 
   const handlePlay = () => {
-    animationView.current.play();
     TrackPlayer.play();
+    animationView.current.play();
+    console.log('handle play');
   };
 
   const handleBackButton = () => {
     navigation.navigate('Home');
-    animationView.current.reset();
     TrackPlayer.reset();
+    animationView.current.reset();
     console.log('AUDIO RESET');
   };
-
-  //state to manage whether track player is initialized or not
-  const [isTrackPlayerInit, setIsTrackPlayerInit] = useState(false);
 
   //initialize the TrackPlayer when the App component is mounted
   useEffect(() => {
     console.log('AUDIO RAN');
     const startPlayer = async () => {
-      let isInit = await trackPlayerInit();
-      setIsTrackPlayerInit(isInit);
-      console.log(isTrackPlayerInit);
-      if (isInit) {
-        handlePlay();
-      }
+      await trackPlayerInit();
+      await handlePlay();
+      let state = await TrackPlayer.getState();
+      console.log(state);
     };
     startPlayer();
   });
@@ -72,11 +73,7 @@ const Meditate = (props) => {
         animationRef={animationView}
         loop={false}
       />
-      <Button
-        title="Play"
-        disabled={!isTrackPlayerInit}
-        onPress={() => handlePlay()}
-      />
+      <Button title="Play" onPress={() => handlePlay()} />
       <Button title="Pause" onPress={() => handlePause()} />
       <Button title="Back" onPress={() => handleBackButton()} />
     </Container>
