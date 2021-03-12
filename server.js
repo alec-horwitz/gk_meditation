@@ -28,7 +28,7 @@ runTesseract = async () => {
 
 	let result
 	 
-	await tesseract.recognize("testImage.png", config)
+	await tesseract.recognize(`https://images.ctfassets.net/4efzc1v8z48a/4VolH59inrgi0Laxg7W0KP/6bab752e5872e369f04bcdc1f37be4c7/image3.jpg`, config)
 	  .then(text => {
 	    console.log("Result:", text)
 	    result = text
