@@ -28,6 +28,9 @@ const Home = (props) => {
       <View style={styles.circle} />
       <FlexContainer />
       <View style={styles.buttonContainer}>
+        <NavButton onPress={() => navigation.navigate('OCR')}>
+          <Icon style={styles.iconStyles} name="camera-iris" />
+        </NavButton>
         <NavButton onPress={() => navigation.navigate('Meditate')}>
           <Icon style={styles.iconStyles} name="head-heart" />
         </NavButton>
