@@ -8,6 +8,7 @@ target 'gk_meditation' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+
   target 'gk_meditationTests' do
     inherit! :complete
     # Pods for testing
