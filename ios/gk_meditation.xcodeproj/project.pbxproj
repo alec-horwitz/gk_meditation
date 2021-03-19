@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* gk_meditationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* gk_meditationTests.m */; };
-		0AFEEEFC900B97BD6AF2EFED /* libPods-gk_meditation-gk_meditationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 098D316FE66D0783E22483CD /* libPods-gk_meditation-gk_meditationTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		21BD72F35F03A98B54FEF3CB /* libPods-gk_meditation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D492B303F6AC4470F7E636 /* libPods-gk_meditation.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* gk_meditationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* gk_meditationTests.m */; };
-		3370DC58D00C7C85E94D7F59 /* libPods-gk_meditation-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8984CBF248F24444007FF0A3 /* libPods-gk_meditation-tvOSTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C5C25896AAF8646B4CEBFD6A /* libPods-gk_meditation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1F1754AAE74882E492B41F /* libPods-gk_meditation.a */; };
-		D6FB66BA8AC6D300CB0BCC36 /* libPods-gk_meditation-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 608A6C0DCEC6EF5E71678BE3 /* libPods-gk_meditation-tvOS.a */; };
+		926EA582A4167258016555A8 /* libPods-gk_meditation-gk_meditationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D22A6A844C667D667B482C /* libPods-gk_meditation-gk_meditationTests.a */; };
+		980F56524959220D77C0E10E /* libPods-gk_meditation-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B41E0014654D21F73BD78EEE /* libPods-gk_meditation-tvOSTests.a */; };
+		F07F0820E58170A351CB7FB5 /* libPods-gk_meditation-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D908DE4A6DE786D3780B6171 /* libPods-gk_meditation-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,29 +45,29 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* gk_meditationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gk_meditationTests.m; sourceTree = "<group>"; };
 		018B76B1251119890085F6DE /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		098D316FE66D0783E22483CD /* libPods-gk_meditation-gk_meditationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation-gk_meditationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		107EDF8909300F5602AC046D /* Pods-gk_meditation-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOS/Pods-gk_meditation-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* gk_meditation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gk_meditation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = gk_meditation/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = gk_meditation/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = gk_meditation/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = gk_meditation/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = gk_meditation/main.m; sourceTree = "<group>"; };
-		17E716E8FA1E10BCAA625B6B /* Pods-gk_meditation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation/Pods-gk_meditation.debug.xcconfig"; sourceTree = "<group>"; };
-		1CC4A392E73EB233E3A82E89 /* Pods-gk_meditation-gk_meditationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-gk_meditationTests.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests.release.xcconfig"; sourceTree = "<group>"; };
-		2CACACC9588B547E673E2509 /* Pods-gk_meditation-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOS.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOS/Pods-gk_meditation-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* gk_meditation-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gk_meditation-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* gk_meditation-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gk_meditation-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5805A188A3FB862312E6868C /* Pods-gk_meditation-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOSTests/Pods-gk_meditation-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		608A6C0DCEC6EF5E71678BE3 /* libPods-gk_meditation-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DAEB0B52DBB596E9F9CD285 /* Pods-gk_meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation/Pods-gk_meditation.release.xcconfig"; sourceTree = "<group>"; };
+		310C8948793D8DAA4EE0F512 /* Pods-gk_meditation-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOS/Pods-gk_meditation-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3FA2BC1CFD6357EFE02F8DC5 /* Pods-gk_meditation-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOSTests/Pods-gk_meditation-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5439595ED643DB7A2D0767A1 /* Pods-gk_meditation-gk_meditationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-gk_meditationTests.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		68D22A6A844C667D667B482C /* libPods-gk_meditation-gk_meditationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation-gk_meditationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = gk_meditation/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		856828DE4F624CEF8A68A764 /* Pods-gk_meditation-gk_meditationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-gk_meditationTests.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8984CBF248F24444007FF0A3 /* libPods-gk_meditation-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EADECE8C0D0053D7C231B5F0 /* Pods-gk_meditation-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOSTests/Pods-gk_meditation-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		82716C67362FF4B598AB1251 /* Pods-gk_meditation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation/Pods-gk_meditation.debug.xcconfig"; sourceTree = "<group>"; };
+		8F414B5B9E4C48310FDB6494 /* Pods-gk_meditation-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOS.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOS/Pods-gk_meditation-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		8FDE5BC1BFBAC4FF97EA604D /* Pods-gk_meditation-gk_meditationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-gk_meditationTests.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests.release.xcconfig"; sourceTree = "<group>"; };
+		B41E0014654D21F73BD78EEE /* libPods-gk_meditation-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D492B303F6AC4470F7E636 /* libPods-gk_meditation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D908DE4A6DE786D3780B6171 /* libPods-gk_meditation-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E524EB254B3D6843DF88ED63 /* Pods-gk_meditation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation.release.xcconfig"; path = "Target Support Files/Pods-gk_meditation/Pods-gk_meditation.release.xcconfig"; sourceTree = "<group>"; };
+		E950DD31DFDABC36EFAC92A0 /* Pods-gk_meditation-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gk_meditation-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-gk_meditation-tvOSTests/Pods-gk_meditation-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		EE1F1754AAE74882E492B41F /* libPods-gk_meditation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gk_meditation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFEEEFC900B97BD6AF2EFED /* libPods-gk_meditation-gk_meditationTests.a in Frameworks */,
+				926EA582A4167258016555A8 /* libPods-gk_meditation-gk_meditationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C25896AAF8646B4CEBFD6A /* libPods-gk_meditation.a in Frameworks */,
+				21BD72F35F03A98B54FEF3CB /* libPods-gk_meditation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6FB66BA8AC6D300CB0BCC36 /* libPods-gk_meditation-tvOS.a in Frameworks */,
+				F07F0820E58170A351CB7FB5 /* libPods-gk_meditation-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3370DC58D00C7C85E94D7F59 /* libPods-gk_meditation-tvOSTests.a in Frameworks */,
+				980F56524959220D77C0E10E /* libPods-gk_meditation-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,10 +151,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				EE1F1754AAE74882E492B41F /* libPods-gk_meditation.a */,
-				098D316FE66D0783E22483CD /* libPods-gk_meditation-gk_meditationTests.a */,
-				608A6C0DCEC6EF5E71678BE3 /* libPods-gk_meditation-tvOS.a */,
-				8984CBF248F24444007FF0A3 /* libPods-gk_meditation-tvOSTests.a */,
+				C2D492B303F6AC4470F7E636 /* libPods-gk_meditation.a */,
+				68D22A6A844C667D667B482C /* libPods-gk_meditation-gk_meditationTests.a */,
+				D908DE4A6DE786D3780B6171 /* libPods-gk_meditation-tvOS.a */,
+				B41E0014654D21F73BD78EEE /* libPods-gk_meditation-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,14 +162,14 @@
 		4BC1309291A61A6C374EEA65 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				17E716E8FA1E10BCAA625B6B /* Pods-gk_meditation.debug.xcconfig */,
-				6DAEB0B52DBB596E9F9CD285 /* Pods-gk_meditation.release.xcconfig */,
-				856828DE4F624CEF8A68A764 /* Pods-gk_meditation-gk_meditationTests.debug.xcconfig */,
-				1CC4A392E73EB233E3A82E89 /* Pods-gk_meditation-gk_meditationTests.release.xcconfig */,
-				107EDF8909300F5602AC046D /* Pods-gk_meditation-tvOS.debug.xcconfig */,
-				2CACACC9588B547E673E2509 /* Pods-gk_meditation-tvOS.release.xcconfig */,
-				5805A188A3FB862312E6868C /* Pods-gk_meditation-tvOSTests.debug.xcconfig */,
-				EADECE8C0D0053D7C231B5F0 /* Pods-gk_meditation-tvOSTests.release.xcconfig */,
+				82716C67362FF4B598AB1251 /* Pods-gk_meditation.debug.xcconfig */,
+				E524EB254B3D6843DF88ED63 /* Pods-gk_meditation.release.xcconfig */,
+				5439595ED643DB7A2D0767A1 /* Pods-gk_meditation-gk_meditationTests.debug.xcconfig */,
+				8FDE5BC1BFBAC4FF97EA604D /* Pods-gk_meditation-gk_meditationTests.release.xcconfig */,
+				310C8948793D8DAA4EE0F512 /* Pods-gk_meditation-tvOS.debug.xcconfig */,
+				8F414B5B9E4C48310FDB6494 /* Pods-gk_meditation-tvOS.release.xcconfig */,
+				E950DD31DFDABC36EFAC92A0 /* Pods-gk_meditation-tvOSTests.debug.xcconfig */,
+				3FA2BC1CFD6357EFE02F8DC5 /* Pods-gk_meditation-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -214,11 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "gk_meditationTests" */;
 			buildPhases = (
-				5B9F6E1AD154737F1F89D99E /* [CP] Check Pods Manifest.lock */,
+				B19C69D9530B236DFE9EA8CE /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				5571E0EBD6BBFB517CCA1CCB /* [CP] Copy Pods Resources */,
+				FD40CB2A90905F339A715049 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,13 +234,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "gk_meditation" */;
 			buildPhases = (
-				3C96913C22CC777B33E6E880 /* [CP] Check Pods Manifest.lock */,
+				CA2EA1F19E0675DDAD1BDD8F /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C34E56C109476948EA630799 /* [CP] Copy Pods Resources */,
+				1BAEB75AFA640D490154CCEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,7 +255,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "gk_meditation-tvOS" */;
 			buildPhases = (
-				6F99D6B0C93AD07319A22B91 /* [CP] Check Pods Manifest.lock */,
+				D0DE98BA5E3A2E9F6EBE05A1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -275,7 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "gk_meditation-tvOSTests" */;
 			buildPhases = (
-				F2446641A44AD24D42656C9B /* [CP] Check Pods Manifest.lock */,
+				1AB42BD2788E889507C3F3DB /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -387,21 +387,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		3C96913C22CC777B33E6E880 /* [CP] Check Pods Manifest.lock */ = {
+		1AB42BD2788E889507C3F3DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,108 +402,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5571E0EBD6BBFB517CCA1CCB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests-resources.sh",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B9F6E1AD154737F1F89D99E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-gk_meditationTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6F99D6B0C93AD07319A22B91 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C34E56C109476948EA630799 /* [CP] Copy Pods Resources */ = {
+		1BAEB75AFA640D490154CCEE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -567,7 +459,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gk_meditation/Pods-gk_meditation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F2446641A44AD24D42656C9B /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		B19C69D9530B236DFE9EA8CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -582,7 +488,51 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-gk_meditationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2EA1F19E0675DDAD1BDD8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0DE98BA5E3A2E9F6EBE05A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gk_meditation-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -625,6 +575,56 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD40CB2A90905F339A715049 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gk_meditation-gk_meditationTests/Pods-gk_meditation-gk_meditationTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -682,7 +682,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 856828DE4F624CEF8A68A764 /* Pods-gk_meditation-gk_meditationTests.debug.xcconfig */;
+			baseConfigurationReference = 5439595ED643DB7A2D0767A1 /* Pods-gk_meditation-gk_meditationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -706,7 +706,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CC4A392E73EB233E3A82E89 /* Pods-gk_meditation-gk_meditationTests.release.xcconfig */;
+			baseConfigurationReference = 8FDE5BC1BFBAC4FF97EA604D /* Pods-gk_meditation-gk_meditationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -727,7 +727,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17E716E8FA1E10BCAA625B6B /* Pods-gk_meditation.debug.xcconfig */;
+			baseConfigurationReference = 82716C67362FF4B598AB1251 /* Pods-gk_meditation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -751,7 +751,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DAEB0B52DBB596E9F9CD285 /* Pods-gk_meditation.release.xcconfig */;
+			baseConfigurationReference = E524EB254B3D6843DF88ED63 /* Pods-gk_meditation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -773,7 +773,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 107EDF8909300F5602AC046D /* Pods-gk_meditation-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 310C8948793D8DAA4EE0F512 /* Pods-gk_meditation-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -801,7 +801,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CACACC9588B547E673E2509 /* Pods-gk_meditation-tvOS.release.xcconfig */;
+			baseConfigurationReference = 8F414B5B9E4C48310FDB6494 /* Pods-gk_meditation-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -829,7 +829,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5805A188A3FB862312E6868C /* Pods-gk_meditation-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = E950DD31DFDABC36EFAC92A0 /* Pods-gk_meditation-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -856,7 +856,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EADECE8C0D0053D7C231B5F0 /* Pods-gk_meditation-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 3FA2BC1CFD6357EFE02F8DC5 /* Pods-gk_meditation-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

@@ -16,91 +16,104 @@ const Container = styled.View`
 
 let cameraObj: any;
 
-const OCR = (props) => {
-  const {navigation, route} = props;
 
-  let capturedPhoto = null;
-  let OCResponse = null
-
-  runOCR = async (photoPath) => {
-
-    // const photo = {
-    //   uri: Platform.OS === 'android' ? photoPath : photoPath.replace('file://', ''),
-    //   type: "image/jpg",
-    //   name: photoPath.slice(photoPath.lastIndexOf("/")+1),
-    // };
-
-    // const form = new FormData();
-
-    // form.append("photo", photo);
-    // form.append("userId", uuidv4())
-
-    // RNFS.readFile(photoPath, 'base64')
-    // .then(base64photo =>{
-    //   console.log(base64photo);
-      fetch('http://192.168.0.184:3000/api/upload', {
-        method: 'post',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({text: "Hello World! Post Response!"})
-      }).catch(function(error) {
-        console.log('There has been a problem with your fetch operation: ' + error.message);
-      });
-      // .then(res => res.json()).then(res => {
-      //   console.log(res)
-      //   OCResponse = res
-      // })
-    // });
+class OCR extends React.Component {
+  state = {
+    photo: null,
+    OCRTextOuptput: null
   }
+
+  handleUploadPhoto = () => {
+    const {photo} = this.state
+
+    const data = new FormData();
+
+    data.append("photo", {
+      type: "image/jpg",
+      name: photo.slice(photo.lastIndexOf("/")+1),
+      uri: Platform.OS === 'android' ? photo : photo.replace('file://', '/private'),
+    })
+
+    console.log("Hello World! data: ", data)
+
+    fetch('http://192.168.0.184:3000/api/upload', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'image/jpeg',
+      },
+      body: data
+    })
+      .then(response => response.json())
+      .then(response => {
+        console.log("upload succes", response);
+        alert("Upload success!");
+        this.setState({ OCRTextOuptput: response.result });
+      })
+      .catch(error => {
+        console.log("upload error", error);
+        alert("Upload failed!");
+      });
+  };
 
   takePicture = async () => {
     if (cameraObj) {
       const options = { quality: 0.5, base64: true };
       const data = await cameraObj.takePictureAsync(options);
-      capturedPhoto = data.uri
+      this.setState({photo: data.uri});
     }
-    console.log(capturedPhoto)
-    runOCR(capturedPhoto)
   };
 
-  return (
-    <View style={{flex: 1}}>
-      <RNCamera
-        ref={e => (cameraObj = e)}
-        style={styles.preview}
-        type={RNCamera.Constants.Type.back}
-        flashMode={RNCamera.Constants.FlashMode.off}
-        androidCameraPermissionOptions={{
-          title: 'Permission to use camera',
-          message: 'We need your permission to use your camera',
-          buttonPositive: 'Ok',
-          buttonNegative: 'Cancel',
-        }}
-        androidRecordAudioPermissionOptions={{
-          title: 'Permission to use audio recording',
-          message: 'We need your permission to use your audio',
-          buttonPositive: 'Ok',
-          buttonNegative: 'Cancel',
-        }}
-        onGoogleVisionBarcodesDetected={({barcodes}) => {
-          console.log(barcodes);
-      }}>
-      </RNCamera>
+  render() {
+    const { photo, OCRTextOuptput } = this.state
+    const {navigation, route} = this.props;
+    photo && !OCRTextOuptput && this.handleUploadPhoto()
+
+    return (
+      <View style={{flex: 1}}>
+      { photo === null ?
+        <RNCamera
+          ref={e => (cameraObj = e)}
+          style={styles.preview}
+          type={RNCamera.Constants.Type.back}
+          flashMode={RNCamera.Constants.FlashMode.off}
+          androidCameraPermissionOptions={{
+            title: 'Permission to use camera',
+            message: 'We need your permission to use your camera',
+            buttonPositive: 'Ok',
+            buttonNegative: 'Cancel',
+          }}
+          androidRecordAudioPermissionOptions={{
+            title: 'Permission to use audio recording',
+            message: 'We need your permission to use your audio',
+            buttonPositive: 'Ok',
+            buttonNegative: 'Cancel',
+          }}
+          onGoogleVisionBarcodesDetected={({barcodes}) => {
+            console.log(barcodes);
+        }}>
+        </RNCamera> : 
+        <View style={styles.result}>
+          <Text style={styles.resultText}>{OCRTextOuptput}</Text>
+        </View>
+      }
       <View style={styles.frameContainer}>
         <Text style={styles.titleText}>{route.params ? route.params.name : 'OCR'}</Text>
-        <View>{OCResponse}</View>
         <View>
-          <TouchableOpacity onPress={()=>takePicture()} style={styles.capture}>
-            <Text> SNAP </Text>
-          </TouchableOpacity>
+          { photo === null ?
+            <TouchableOpacity onPress={()=>this.takePicture()} style={styles.capture}>
+              <Text> SNAP </Text>
+            </TouchableOpacity> :
+            <TouchableOpacity onPress={()=>this.setState({ photo: null,  OCRTextOuptput: null})} style={styles.capture}>
+              <Text> Scan new word </Text>
+            </TouchableOpacity>
+          }
           <Button title="Back" onPress={() => navigation.navigate('Home')} />
         </View>
       </View>
     </View>
-  );
-};
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   frameContainer: {
@@ -115,6 +128,17 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     display: 'flex',
+  },
+  result: {
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  resultText: {
+    color: 'black',
   },
   capture: {
     flex: 0,
